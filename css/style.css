@@ -8,6 +8,7 @@ font-family: 'PT Sans', sans-serif;
     --fuenteHeading: 'PT Sans', sans-serif;
     --fuenteParrafos: 'Open Sans', sans-serif;
     --colorPrimario: #784d3c;
+    --gris:#e1e1e1;
     --colorBlanco: #ffffff;
     --colorNegro: #000000;
 }
@@ -64,7 +65,7 @@ h4 {
 }
 
 img {
-    max-width: 10%;
+    max-width: 100%;
 }
 
 /* utilidades */
@@ -133,4 +134,57 @@ img {
     text-align: center;
     font-size: 1.8rem;
     color: var(--colorBlanco);
+    transition: background-color .3s ease;
+}
+.navegacion__enlace:hover{
+    cursor: pointer;
+    color: #3c3c3c;
+}
+
+
+/* Contenido Principal */
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }   
+}
+
+.entrada{
+    border-bottom: 1px solid var(--gris) ;
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--colorBlanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+
+}
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block; 
+        
+    }
+}
+.boton--primario{
+    background-color: var(--colorNegro);
+    transition: background-color .3s ease;
+}
+
+.boton--primario:hover {
+    cursor: pointer;
+    background-color: #626262;
 }
