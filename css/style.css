@@ -171,7 +171,8 @@ img {
     border-bottom: 1px solid var(--gris);
     margin-bottom: 2rem;
 }
-.entrada__contenido{
+
+.entrada__contenido {
     text-align: justify;
 }
 
@@ -244,7 +245,7 @@ img {
 .widget-curso__info,
 .curso__info {
     font-weight: normal;
-    
+
 }
 
 .widget-curso__label,
@@ -264,9 +265,10 @@ img {
 }
 
 /* Sobre nosotros */
-.sobre-nosotros__texto{
-   text-align: justify;
+.sobre-nosotros__texto {
+    text-align: justify;
 }
+
 @media (min-width: 768px) {
     /*  .sobre-nosotros{
         display: flex;
@@ -314,4 +316,41 @@ img {
 .curso:last-of-type {
     border-bottom: none;
 }
+
+/* Entrda blog recetas*/
+.receta{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 4rem;
+}
+.receta:last-of-type{
+    border-bottom: none;
+}
+
+@media (min-width: 768px) {
+    .receta{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        column-gap: 2rem;   
+    }
+    
+}
+@media (max-width: 768px) {
+    .receta__ingrediente{
+        text-align: center;
+    }
+    
+}
+
+/* Contacto */
+
+.contacto-bg{
+    background-image: url(../img/contacto1.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+
 
