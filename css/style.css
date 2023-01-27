@@ -32,7 +32,7 @@ body {
 
 /* Globales */
 .contenedor {
-   
+
     width: min(90%, 120rem);
     margin: 0 auto;
 }
@@ -68,6 +68,7 @@ h4 {
 img {
     max-width: 100%;
 }
+
 
 /* utilidades */
 .no-margin {
@@ -105,7 +106,7 @@ img {
 
 }
 
-.barra{
+.barra {
     padding-top: 3rem;
 }
 
@@ -114,7 +115,7 @@ img {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+
 
     }
 
@@ -133,11 +134,13 @@ img {
 }
 
 @media (min-width: 769px) {
-    .navegacion, a {
+
+    .navegacion,
+    a {
         display: flex;
         margin: 0 3% 0 3%;
     }
-    
+
 }
 
 /* Navegacion */
@@ -167,6 +170,9 @@ img {
 .entrada {
     border-bottom: 1px solid var(--gris);
     margin-bottom: 2rem;
+}
+.entrada__contenido{
+    text-align: justify;
 }
 
 .entrada:last-of-type {
@@ -229,17 +235,22 @@ img {
     margin-bottom: 0;
 }
 
-.widget-curso__label {
+.widget-curso__label,
+.curso__label {
     font-family: var(--fuenteHeading);
     font-weight: 700;
 }
 
-.widget-curso__info {
+.widget-curso__info,
+.curso__info {
     font-weight: normal;
+    
 }
 
 .widget-curso__label,
-.widget-curso__info {
+.widget-curso__info,
+.curso__label,
+.curso__info {
     font-size: 2rem;
 }
 
@@ -250,5 +261,57 @@ img {
     padding-bottom: 3rem;
     margin-top: 4rem;
 
+}
+
+/* Sobre nosotros */
+.sobre-nosotros__texto{
+   text-align: justify;
+}
+@media (min-width: 768px) {
+    /*  .sobre-nosotros{
+        display: flex;
+        justify-content: space-between;
+        
+    } */
+    /*  .sobre-nosotros__imagen,
+    .sobre-nosotros__texto{
+        flex-basis: calc(50% - 2rem);
+        /* flex: factor de crecimiento - tamañp del elemento - base (calc(50% - 1rem) 
+    } */
+
+    /* texto e imagen responsivo */
+    /*   .sobre-nosotros__imagen{
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+    .sobre-nosotros__texto{
+        flex: 0 0 calc(50% - 1rem);
+    } */
+
+    /* grid - opcion 2 */
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
+}
+
+/* Cursos */
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.curso:last-of-type {
+    border-bottom: none;
 }
 
